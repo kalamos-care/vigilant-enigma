@@ -30,9 +30,9 @@ const Navigation = ({ siteTitle }) => {
 						{siteTitle}
 					</MenuLink>
 					<Rows>
-						<NavLink to="/register-kit/">Register Kit</NavLink>
-						<NavLink to="/get-tested/">Get Tested</NavLink>
-						<NavLink to="/account/">Account</NavLink>
+						<NavLink to="/register-kit">Register Kit</NavLink>
+						<NavLink to="/get-tested">Get Tested</NavLink>
+						<NavLink to="/account/order-history">Order History</NavLink>
 					</Rows>
 				</Columns>
 				<MenuLink to='/cart'>

@@ -26,3 +26,12 @@ exports.createPages = ({ graphql, actions }) => {
     })
   })
 }
+
+exports.onCreatePage = async ({ page, actions }) => {
+  const { createPage } = actions
+  // Add dynamic order history page
+  if (page.path.match(/^\/account\/order-history\//)) {
+    page.matchPath = "/account/order-history/*"
+    createPage(page)
+  }
+}
