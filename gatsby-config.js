@@ -63,14 +63,14 @@ module.exports = {
         '~': path.join(__dirname, 'src/'),
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-134421805-1",
-        anonymize: true,
-        respectDNT: true,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: "UA-134421805-1",
+    //     anonymize: true,
+    //     respectDNT: true,
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
