@@ -28,6 +28,22 @@ export const MenuLink = styled(Link)`
   }
 `
 
+export const Columns = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Rows = styled.div`
+  display: flex;
+`;
+
+export const NavLink = styled(Link)`
+  color: white;
+  margin-top: 1rem;
+  padding: .25rem 1rem;
+  margin-left: -1rem;
+`;
+
 export const CartCounter = styled.span`
   background-color: white;
   color: #663399;
@@ -39,9 +55,8 @@ export const CartCounter = styled.span`
   z-index: 20;
 `
 
-    
-     
-        
-          
-            
-              
+
+
+
+
+

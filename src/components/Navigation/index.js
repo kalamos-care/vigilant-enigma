@@ -1,12 +1,14 @@
 import React, { useContext } from 'react'
 import reduce from 'lodash/reduce'
 import PropTypes from 'prop-types'
-
 import StoreContext from '~/context/StoreContext'
 import {
-	CartCounter, 
+	CartCounter,
+	Columns,
 	Container,
+	NavLink,
 	MenuLink,
+	Rows,
 	Wrapper
 } from './styles'
 
@@ -23,9 +25,16 @@ const Navigation = ({ siteTitle }) => {
 	return(
 		<Wrapper>
 			<Container>
-				<MenuLink to='/'>
-					{siteTitle}
-				</MenuLink>
+				<Columns>
+					<MenuLink to='/'>
+						{siteTitle}
+					</MenuLink>
+					<Rows>
+						<NavLink to="/register-kit/">Register Kit</NavLink>
+						<NavLink to="/get-tested/">Get Tested</NavLink>
+						<NavLink to="/account/">Account</NavLink>
+					</Rows>
+				</Columns>
 				<MenuLink to='/cart'>
 					{hasItems &&
 						<CartCounter>
