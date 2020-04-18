@@ -2,15 +2,7 @@ import React, { useContext } from 'react'
 import reduce from 'lodash/reduce'
 import PropTypes from 'prop-types'
 import StoreContext from '~/context/StoreContext'
-import {
-	CartCounter,
-	Columns,
-	Container,
-	NavLink,
-	MenuLink,
-	Rows,
-	Wrapper
-} from './styles'
+import AppAppBar from '../../theme/modules/views/AppAppBar';
 
 const useQuantity = () => {
 	const { store: {checkout} } = useContext(StoreContext)
@@ -23,28 +15,13 @@ const Navigation = ({ siteTitle }) => {
   const [hasItems, quantity] = useQuantity()
 
 	return(
-		<Wrapper>
-			<Container>
-				<Columns>
-					<MenuLink to='/'>
-						{siteTitle}
-					</MenuLink>
-					<Rows>
-						<NavLink to="/register-kit">Register Kit</NavLink>
-						<NavLink to="/get-tested">Get Tested</NavLink>
-						<NavLink to="/account/order-history">Order History</NavLink>
-					</Rows>
-				</Columns>
-				<MenuLink to='/cart'>
-					{hasItems &&
-						<CartCounter>
-							{quantity}
-						</CartCounter>
-					}
-					Cart 🛍
-				</MenuLink>
-			</Container>
-		</Wrapper>
+		<AppAppBar
+			title={siteTitle}
+			cart={{
+				hasItems,
+				quantity
+			}}
+		/>
 	)
 }
 

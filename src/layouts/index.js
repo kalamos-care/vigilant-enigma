@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
-
+import { ThemeProvider } from '@material-ui/core/styles';
 import ContextProvider from '~/provider/ContextProvider'
-
 import { GlobalStyle } from '~/utils/styles'
 import Navigation from '~/components/Navigation'
+import withRoot from '~/theme/modules/withRoot';
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -50,4 +50,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default withRoot(Layout)
