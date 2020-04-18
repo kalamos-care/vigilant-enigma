@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
-import { ThemeProvider } from '@material-ui/core/styles';
 import ContextProvider from '~/provider/ContextProvider'
 import { GlobalStyle } from '~/utils/styles'
 import Navigation from '~/components/Navigation'
