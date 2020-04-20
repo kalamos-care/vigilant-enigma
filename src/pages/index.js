@@ -9,8 +9,9 @@ import TestCenterSearch from '~/components/TestCenterSearch'
 const IndexPage = () => (
   <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Shop powered by Gatsby and Shopify.</p>
+    <h1>LOVE CAN BE COMPLICATED.<br />DON'T WORRY, WE GET IT.</h1>
+    <h3>Kalamos is here to help you better protect yourself and your community.</h3>
+    <p>Need to get tested? Start by entering your zipcode below.</p>
     <TestCenterSearch />
   </>
 )
