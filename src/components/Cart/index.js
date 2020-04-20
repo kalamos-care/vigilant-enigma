@@ -6,7 +6,7 @@ import LineItem from './LineItem'
 const Cart = () => {
   const {
     store: { checkout },
-    
+
   } = useContext(StoreContext)
 
   const handleCheckout = () => {
