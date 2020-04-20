@@ -3,37 +3,37 @@ import { green, grey, red } from '@material-ui/core/colors';
 
 const rawTheme = createMuiTheme({
   palette: {
-    common: {
-      black: "rgba(31, 18, 53, 1)",
-      white: "#fff"
+    "common": {
+      "black": "rgba(31, 18, 53, 1)",
+      "white": "#fff"
     },
-    background: {
-      paper: "rgba(244, 239, 252, 1)",
-      default: "rgba(255, 255, 255, 1)"
+    "background": {
+      "paper": "rgba(244, 239, 252, 1)",
+      "default": "rgba(255, 255, 255, 1)"
     },
-    primary: {
-      light: "rgba(150, 131, 188, 1)",
-      main: "rgba(103, 86, 140, 1)",
-      dark: "rgba(59, 45, 94, 1)",
-      contrastText: "#fff"
+    "primary": {
+      "light": "rgba(150, 131, 188, 1)",
+      "main": "rgba(103, 86, 140, 1)",
+      "dark": "rgba(59, 45, 94, 1)",
+      "contrastText": "#fff"
     },
-    secondary: {
-      light: "rgba(255, 160, 154, 1)",
-      main: "rgba(255, 110, 108, 1)",
-      dark: "rgba(199, 60, 65, 1)",
-      contrastText: "#fff"
+    "secondary": {
+      "light": "rgba(91, 70, 122, 1)",
+      "main": "rgba(48, 30, 78, 1)",
+      "dark": "rgba(14, 0, 38, 1)",
+      "contrastText": "#fff"
     },
-    text: {
-      primary: "rgba(31, 18, 53, 1)",
-      secondary: "rgba(27, 20, 37, 1)",
-      disabled: "rgba(226, 218, 235, 1)",
-      hint: "rgba(244, 239, 252, 1)"
-    },
-    error: {
-      light: "rgba(255, 255, 165, 1)",
-      main: "rgba(251, 221, 116, 1)",
-      dark: "rgba(198, 172, 69, 1)",
+    "error": {
+      "light": "rgba(255, 160, 154, 1)",
+      "main": "rgba(255, 110, 108, 1)",
+      "dark": "rgba(199, 60, 65, 1)",
       "contrastText": "rgba(31, 18, 53, 1)"
+    },
+    "text": {
+      "primary": "rgba(31, 18, 53, 1)",
+      "secondary": "rgba(27, 20, 37, 1)",
+      "disabled": "rgba(226, 218, 235, 1)",
+      "hint": "rgba(244, 239, 252, 1)"
     },
     success: {
       xLight: green[50],
