@@ -3,47 +3,6 @@
 # vigilant-enigma
 Order, register, repeat.
 
-## Create a JAM Stack for your home testing brand
-Deploy a Gatsby site with Shopify integration to Netlify in minutes.
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<h1 align="center">
-  <img alt="Gatsby" src="resources/shopify+gatsby.png" height="60px" />
-  <br/>
-  Gatsby Shopify starter
-</h1>
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d374a159-9ee3-4b02-91a3-ee3053990fcb/deploy-status)](https://app.netlify.com/sites/gatsby-shopify-starter/deploys)
-
-Kick off your next eCommerce experience with this Gatsby starter. It is based on the default Gatsby starter to be easily modifiable. [Demo](https://gatsby-shopify-starter.netlify.com)
-
-This starter also includes credentials to a Shopify demo store so you can try it out immediately without having to start a store. To use your own just change the values inside of `.env`.
-
-If you have questions feel free to message me on [Twitter](https://twitter.com/alexanderhorl) 🤙🏻
-
-Checkout [nureineburg.de](https://nureineburg.de) for a real public shop built with this starter, the code is also [public](https://github.com/AlexanderProd/nureineburg.de/).
-
-## 💎 Features
-
-- Cart
-- Product grid
-- Product page
-- Dynamic Inventory Checking
-- Image optimization with Gatsby Image
-- Styled Components with Emotion
-- Google Analytics
-- SEO
-
-### 📦 Dynamic Inventory Checking
-The Shopify product inventory is being checked in realtime, therefore no rebuilding and redeploy is needed when a product goes out of stock. This avoids problems where products could still be available even though they're out of stock due to redeploy delay.
-
-### 🖌 Styling
-I'm using [Emotion](https://emotion.sh/docs/introduction) as styled components library, but the starter is purposely only sparsely styled so you don't have to remove unecessary code but can instead add your own styling immediately.
-
-## ⚠️ Common problems
-
-- You need to use the Shopify Storefront API credentials not the regular Shopify API.
-- You need to have at least one published product on Shopify.
-
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
@@ -85,17 +44,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## Deploy
-
-Checkout my other open-source project [JAMStackBox](https://github.com/AlexanderProd/jam-stack-box) to continuously deploy your Gatsby site on your own server.
-
-## 📌 ToDo
-
-I'll happily merge any pull request to improve the starter. 🙂
-- [X] Convert Layout to function component.
-- [X] Add dynamic inventory checking to avoid re-building after every purchase.
-- [X] Add better styling.
-- [X] Add image optimization using Gatsby sharp plugin.
-- [X] Convert ProductForm to function component.
-<!-- AUTO-GENERATED-CONTENT:END -->
