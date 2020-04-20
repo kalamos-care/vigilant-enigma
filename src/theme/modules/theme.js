@@ -3,33 +3,50 @@ import { green, grey, red } from '@material-ui/core/colors';
 
 const rawTheme = createMuiTheme({
   palette: {
+    common: {
+      black: "rgba(31, 18, 53, 1)",
+      white: "#fff"
+    },
+    background: {
+      paper: "rgba(244, 239, 252, 1)",
+      default: "rgba(255, 255, 255, 1)"
+    },
     primary: {
-      light: '#9683bc',
-      main: '#67568c',
-      dark: '#3b2d5e',
+      light: "rgba(150, 131, 188, 1)",
+      main: "rgba(103, 86, 140, 1)",
+      dark: "rgba(59, 45, 94, 1)",
+      contrastText: "#fff"
     },
     secondary: {
-      light: '#ffffff',
-      main: '#f4effc',
-      dark: '#c1bdc9',
+      light: "rgba(255, 160, 154, 1)",
+      main: "rgba(255, 110, 108, 1)",
+      dark: "rgba(199, 60, 65, 1)",
+      contrastText: "#fff"
     },
-    warning: {
-      main: '#ff6e6c',
-      dark: '#c73c41',
+    text: {
+      primary: "rgba(31, 18, 53, 1)",
+      secondary: "rgba(27, 20, 37, 1)",
+      disabled: "rgba(226, 218, 235, 1)",
+      hint: "rgba(244, 239, 252, 1)"
     },
     error: {
-      xLight: red[50],
-      main: red[500],
-      dark: red[700],
+      light: "rgba(255, 255, 165, 1)",
+      main: "rgba(251, 221, 116, 1)",
+      dark: "rgba(198, 172, 69, 1)",
+      "contrastText": "rgba(31, 18, 53, 1)"
     },
     success: {
       xLight: green[50],
       main: green[500],
       dark: green[700],
     },
+    warning: {
+      main: '#ff6e6c',
+      dark: '#c73c41',
+    },
   },
   typography: {
-    fontFamily: "'Work Sans', sans-serif",
+    fontFamily: "'Arimo', sans-serif",
     fontSize: 14,
     fontWeightLight: 300, // Work Sans
     fontWeightRegular: 400, // Work Sans
