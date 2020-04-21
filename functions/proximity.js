@@ -1,6 +1,7 @@
+/* TODO: Add CORS header for prod domain. */
 const fetch = require('node-fetch').default;
 
-module.exports = async function handler(event) {
+exports.handler = async (event) => {
   try {
     const qs = event.queryStringParameters;
     const query = Object.keys(qs).map(key => (`${key}=${qs[key]}`));
