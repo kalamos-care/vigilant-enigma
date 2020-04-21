@@ -52,14 +52,10 @@
     "develop": "netlify dev",
     "start": "gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "lambda:build": "netlify-lambda build ./functions",
-    "lambda:install": "netlify-lambda install ./functions",
-    "postinstall": "npm run lambda:install"
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
     "netlify-cli": "^2.47.0",
-    "netlify-lambda": "^1.6.3",
     "prettier": "^1.15.2"
   },
   "repository": {

@@ -71,6 +71,3 @@ yarn-error.log
 # env files
 .env.development
 .env.production
-
-# built lambda functions
-lambdas
