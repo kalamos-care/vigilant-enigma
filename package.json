@@ -53,8 +53,8 @@
     "start": "gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "lambda:build": "netlify-lambda build ./lambda",
-    "lambda:install": "netlify-lambda install ./lambda",
+    "lambda:build": "netlify-lambda build ./functions",
+    "lambda:install": "netlify-lambda install ./functions",
     "postinstall": "npm run lambda:install"
   },
   "devDependencies": {
@@ -68,13 +68,5 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "proxy": {
-    "/.netlify/functions": {
-      "target": "http://localhost:9000",
-      "pathRewrite": {
-        "^/\\.netlify/functions": ""
-      }
-    }
   }
 }
