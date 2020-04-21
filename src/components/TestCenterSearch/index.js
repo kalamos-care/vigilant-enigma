@@ -1,25 +1,18 @@
-import React, { useState, useEffect, useRef } from 'react'
-import CardView from '~/theme/modules/views/Card';
-import mockedProximityResults from '../../../__mocks__/proximity';
+import React, { useState, useEffect, useContext, useRef } from 'react'
 import { Grid, TextField } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
+import CardView from '~/theme/modules/views/Card';
+import FunctionsContext from '~/context/FunctionsContext';
 
 const TestCenterSearch = () => {
   const searchTermEl = useRef(null);
-  const [searchTerm, setSearchTerm] = React.useState('');
-  const [results, setResults] = useState([]);
-  const [isLoading, setIsloading] = useState(false);
-
-  useEffect(() => {
-    if (searchTerm.length) {
-      setIsloading(true);
-      setResults([]);
-      setTimeout(() => {
-        setResults(mockedProximityResults);
-        setIsloading(false);
-      }, 1000)
-    }
-  }, [searchTerm]);
+  const {
+    proximity: {
+      results,
+      loading
+    },
+    updateProximityOrigin,
+  } = useContext(FunctionsContext);
 
   return (
     <>
@@ -32,7 +25,8 @@ const TestCenterSearch = () => {
           <Button
             variant="text"
             color="default"
-            onClick={() => setSearchTerm(searchTermEl.current.value)}
+            type="button"
+            onClick={() => updateProximityOrigin(searchTermEl.current.value)}
           >
             Submit
           </Button>
@@ -40,16 +34,18 @@ const TestCenterSearch = () => {
       </div>
       <Grid
         container
-        spacing="2"
+        spacing={2}
         direction="column"
         justify="flex-start"
         alignItems="stretch"
       >
         {
-          results.length ? results.map(result =>
-            <Grid item>
+          results.length ? results.map((result, i) =>
+            <Grid
+              item
+              key={result.field_org_id}
+            >
               <CardView
-                key={result.field_org_id}
                 title={result.title_field}
                 subtitle={[
                   `${result.field_org_street1} ${result.field_org_street2} ${result.field_org_city_name}, ${result.field_org_state} ${result.field_org_zipcode}`,
@@ -58,7 +54,7 @@ const TestCenterSearch = () => {
                 action="Select"
               />
             </Grid>
-          ) : <Grid item>{isLoading ? 'Loading' : 'No Results'}</Grid>
+          ) : <Grid item>{loading ? 'Loading' : 'No Results'}</Grid>
         }
       </Grid>
     </>

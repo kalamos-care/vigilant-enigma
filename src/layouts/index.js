@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import StoreContextProvider from '~/provider/StoreContextProvider'
+import FunctionsContextProvider from '~/provider/FunctionsContextProvider'
 import { GlobalStyle } from '~/utils/styles'
 import Navigation from '~/components/Navigation'
 import withRoot from '~/theme/modules/withRoot';
@@ -17,27 +18,29 @@ const Wrapper = styled.div`
 const Layout = ({ children }) => {
   return (
     <StoreContextProvider>
-      <GlobalStyle />
-      <StaticQuery
-        query={graphql`
-          query SiteTitleQuery {
-            site {
-              siteMetadata {
-                title
+      <FunctionsContextProvider>
+        <GlobalStyle />
+        <StaticQuery
+          query={graphql`
+            query SiteTitleQuery {
+              site {
+                siteMetadata {
+                  title
+                }
               }
             }
-          }
-        `}
-        render={data => (
-          <>
-            <Navigation siteTitle={data.site.siteMetadata.title} />
-            <Wrapper>
-              {children}
-            </Wrapper>
-            <AppFooter siteTitle={data.site.siteMetadata.title} />
-          </>
-        )}
-      />
+          `}
+          render={data => (
+            <>
+              <Navigation siteTitle={data.site.siteMetadata.title} />
+              <Wrapper>
+                {children}
+              </Wrapper>
+              <AppFooter siteTitle={data.site.siteMetadata.title} />
+            </>
+          )}
+        />
+      </FunctionsContextProvider>
     </StoreContextProvider>
   )
 }
