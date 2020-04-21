@@ -1,3 +1,4 @@
+/* https://npin.cdc.gov/api/organization/proximity?prox[origin]=10003 */
 module.exports = [{
 	"field_org_nid": "327686",
 	"field_org_id": "117162",
