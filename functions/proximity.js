@@ -1,6 +1,6 @@
 const fetch = require('node-fetch').default;
 
-export async function handler(event) {
+module.exports = async function handler(event) {
   try {
     const qs = event.queryStringParameters;
     const query = Object.keys(qs).map(key => (`${key}=${qs[key]}`));
