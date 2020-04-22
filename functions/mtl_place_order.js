@@ -4,4 +4,5 @@ exports.handler = function(event, context, callback) {
         body: JSON.stringify(event.body)
     });
     console.log(JSON.stringify(event.body));
+    console.log(event.body.shipping_address.first_name);
 }
