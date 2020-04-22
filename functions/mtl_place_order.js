@@ -3,4 +3,5 @@ exports.handler = function(event, context, callback) {
         statusCode: 200,
         body: JSON.stringify(event.body)
     });
+    console.log(JSON.stringify(event.body));
 }
