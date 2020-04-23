@@ -1,5 +1,5 @@
 const practice_id = "P04754";
-const physcian_id = 61745;
+const physician_id = 61745;
 
 exports.handler = function(event, context, callback) {
     const payload = JSON.parse(event.body); 
