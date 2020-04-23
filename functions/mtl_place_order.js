@@ -1,8 +1,9 @@
 exports.handler = function(event, context, callback) {
+    const payload = JSON.parse(event.body); 
     callback(null, {
         statusCode: 200,
-        body: JSON.stringify(event.body)
+        body: 'success',
     });
-    console.log(JSON.stringify(event.body));
-    console.log(event.body.shipping_address.first_name);
+    // console.log(payload);
+    console.log(payload.shipping_address.first_name);    
 }
