@@ -41,6 +41,7 @@ const IndexPage = () => (
     </Grid>
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6}>
+        <h2>Get Tested at Home</h2>
         <Card>
           <CardHeader title="Molecular Testing Labs home collection kit">
           </CardHeader>
@@ -75,6 +76,7 @@ const IndexPage = () => (
         </Card>
       </Grid>
       <Grid item xs={12} sm={6}>
+        <h2>Get Tested at a Clinic</h2>
         <TestCenterSearch />
       </Grid>
     </Grid>
