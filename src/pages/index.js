@@ -67,13 +67,17 @@ const IndexPage = () => (
           </CardContent>
           <CardActions>
             <Button size="small" color="primary">
-              Button
+              Buy
         </Button>
             <Button size="small" color="primary">
               Learn More
         </Button>
           </CardActions>
         </Card>
+        <h3>Already have a kit?</h3>
+        <Button size="large" color="primary">
+             Register your kit 
+        </Button>
       </Grid>
       <Grid item xs={12} sm={6}>
         <h2>Get Tested at a Clinic</h2>
