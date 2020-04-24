@@ -1,3 +1,12 @@
+/*
+TO DO
+  1. move practice_id and physician_id to env variables
+    a. figure out how to make these fungible
+  2. determine shipping based on Shopify object
+  3. figure out how to make panel_id dynamic
+  4. determine whether lob and gender need to be dynamic
+*/
+
 const mtl_api_base_url = "https://lisbeta4.moleculartestinglabs.com/";
 const mtlHeaders = {
   "Content-Type": "application/json",
@@ -24,6 +33,12 @@ const gender = "male";
 
 
 exports.handler = function(event, context, callback) {
+  
+    callback(null, {
+      statusCode: 200,
+      body: 'success',
+  });
+  
   const payload = JSON.parse(event.body);
 
   const order = [
@@ -57,11 +72,6 @@ exports.handler = function(event, context, callback) {
     body: order,
     redirect: 'follow'
   };
-
-  callback(null, {
-      statusCode: 200,
-      body: 'success',
-  });
 
   fetch(JSON.stringify(mtl_api_base_url) + "/PlaceOrder", requestOptions)
   .then(response => response.text())
