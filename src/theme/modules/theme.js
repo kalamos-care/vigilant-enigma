@@ -18,6 +18,7 @@ const rawTheme = createMuiTheme({
       "contrastText": "#fff"
     },
     "secondary": {
+      "light": "rgba(255, 110, 108, .1)",
       "main": "rgba(255, 110, 108, 1)",
       "contrastText": "rgba(31, 18, 53, 1)"
     },

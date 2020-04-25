@@ -2,6 +2,7 @@ import React, { useContext, useRef } from 'react'
 import { Grid, TextField } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import CardView from '~/theme/modules/views/Card';
+import SearchPanel from '~/theme/modules/views/SearchPanel';
 import FunctionsContext from '~/context/FunctionsContext';
 
 const TestCenterSearch = () => {
@@ -15,7 +16,7 @@ const TestCenterSearch = () => {
   } = useContext(FunctionsContext);
 
   return (
-    <>
+    <SearchPanel title="Find a Clinic">
       <div>
         <form>
           <TextField
@@ -57,7 +58,7 @@ const TestCenterSearch = () => {
           ) : <Grid item>{loading ? 'Loading' : 'No Results'}</Grid>
         }
       </Grid>
-    </>
+    </SearchPanel>
   );
 };
 

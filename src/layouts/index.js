@@ -9,11 +9,7 @@ import Navigation from '~/components/Navigation'
 import withRoot from '~/theme/modules/withRoot';
 import AppFooter from '~/theme/modules/views/AppFooter';
 
-const Wrapper = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0px 1.0875rem 1.45rem;
-`
+const Wrapper = styled.div``;
 
 const Layout = ({ children }) => {
   return (

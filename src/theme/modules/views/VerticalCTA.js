@@ -23,13 +23,13 @@ const styles = (theme) => ({
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
   },
-  buoy: {
+  image: {
     width: 60,
   },
 });
 
-function ProductSmokingHero(props) {
-  const { classes } = props;
+function VerticalCTA(props) {
+  const { classes, image } = props;
 
   return (
     <Container className={classes.root} component="section">
@@ -41,13 +41,13 @@ function ProductSmokingHero(props) {
       <Typography variant="subtitle1" className={classes.link}>
         We are here to help. Get in touch!
       </Typography>
-      <img src="/static/themes/onepirate/producBuoy.svg" className={classes.buoy} alt="buoy" />
+      {/* <img src={image} className={classes.image} alt="cta image" /> */}
     </Container>
   );
 }
 
-ProductSmokingHero.propTypes = {
+VerticalCTA.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProductSmokingHero);
+export default withStyles(styles)(VerticalCTA);
