@@ -8,6 +8,7 @@
 
 // report_ready
 
+const fetch = require('node-fetch').default;
 
 exports.handler = function(event, context, callback) {
   const payload = JSON.parse(event.body); 

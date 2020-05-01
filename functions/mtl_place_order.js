@@ -9,6 +9,8 @@ TO DO
   4. determine whether lob and gender need to be dynamic
 */
 
+const fetch = require('node-fetch').default;
+
 const mtl_api_base_url = "https://lisbeta4.moleculartestinglabs.com/";
 const mtlHeaders = {
   "Content-Type": "application/json",
