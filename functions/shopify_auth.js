@@ -1,5 +1,6 @@
 /* should this be segmented to be just logging in or include account creation as well?
 */
+const Shopify = require('shopify-api-node');
 
 const fetch = require('node-fetch').default;
 
