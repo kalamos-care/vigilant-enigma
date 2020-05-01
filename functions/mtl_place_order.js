@@ -1,5 +1,7 @@
 /*
 TO DO
+  0. pass MTL response back to the Shopify order as a comment
+      https://shopify.dev/docs/admin-api/rest/reference/orders/order#update-2020-04
   1. move practice_id and physician_id to env variables
     a. figure out how to make these fungible
   2. determine shipping based on Shopify object
