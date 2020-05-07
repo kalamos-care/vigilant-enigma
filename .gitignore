@@ -71,3 +71,6 @@ yarn-error.log
 # env files
 .env.development
 .env.production
+
+# Misc
+notes.md
