@@ -1,22 +1,20 @@
 const fetch = require('node-fetch').default;
 const { url, headers} = require('./lib/shopify');
 
-const customerCreateQuery = (customer) => {
-  return {
-    query: `mutation {
-      customerCreate(input: {
-        email: "${customer.email}",
-        firstName: "${customer.firstName}",
-        lastName: "${customer.lastName}",
-        password: "${customer.password}"
-      }) {
-        customer {
-          id
-        }
+const customerCreateQuery = customer => ({
+  query: `mutation {
+    customerCreate(input: {
+      email: "${customer.email}",
+      firstName: "${customer.firstName}",
+      lastName: "${customer.lastName}",
+      password: "${customer.password}"
+    }) {
+      customer {
+        id
       }
-    }`
-  }
-};
+    }
+  }`
+});
 
 exports.handler = async (event) => {
   try {
