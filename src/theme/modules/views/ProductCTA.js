@@ -6,15 +6,19 @@ import Hidden from '@material-ui/core/Hidden';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import Typography from '../components/Typography';
-import TextField from '../components/TextField';
+// import TextField from '../components/TextField';
 // import Snackbar from '../components/Snackbar';
 import Button from '../components/Button';
 
 const styles = (theme) => ({
   root: {
-    marginTop: theme.spacing(10),
-    marginBottom: theme.spacing(6),
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
     display: 'flex',
+    [theme.breakpoints.up('md')]: {
+      marginTop: theme.spacing(10),
+      marginBottom: theme.spacing(6),
+    },
   },
   cardWrapper: {
     zIndex: 1,
@@ -73,7 +77,7 @@ function ProductCTA(props) {
     image,
     description,
     disclaimer,
-    product,
+    // product,
   } = props;
   // const [open, setOpen] = React.useState(false);
 

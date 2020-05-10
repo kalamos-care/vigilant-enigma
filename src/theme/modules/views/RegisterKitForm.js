@@ -58,7 +58,6 @@ function RegisterKitForm({ onSubmit, sent }) {
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <Field
-                    autoFocus
                     component={RFTextField}
                     autoComplete="fname"
                     fullWidth

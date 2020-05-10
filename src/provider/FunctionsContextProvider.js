@@ -11,10 +11,9 @@ const ContextProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    const { origin } = proximity;
-    if (origin.length) {
+    if (proximity.origin.length) {
       updateProximity(prevState => ({ ...prevState, loading: true, results: [] }));
-      fetch(`${functionsPath}/proximity?prox[origin]=${origin}`)
+      fetch(`${functionsPath}/proximity?prox[origin]=${proximity.origin}`)
         .then(response => response.json())
         .then(results => {
           updateProximity(prevState => ({

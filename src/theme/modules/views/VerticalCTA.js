@@ -23,13 +23,13 @@ const styles = (theme) => ({
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
   },
-  image: {
-    width: 60,
-  },
+  // image: {
+  //   width: 60,
+  // },
 });
 
 function VerticalCTA(props) {
-  const { classes, image } = props;
+  const { classes } = props;
 
   return (
     <Container className={classes.root} component="section">

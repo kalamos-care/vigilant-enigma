@@ -9,6 +9,20 @@ module.exports = {
     title: `Kalamos Care`,
     description: `Buy home testing kits.`,
     author: `@bbthorson`,
+    menuLinks: [
+      {
+        link: '/register-kit',
+        name: 'Register Kit'
+      },
+      {
+        link: '/get-tested',
+        name: 'Get Tested'
+      },
+      {
+        link: '/account/order-history',
+        name: 'Order History'
+      },
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

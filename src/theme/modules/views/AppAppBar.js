@@ -3,20 +3,17 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
+import { Badge, IconButton } from '@material-ui/core'
+import MenuIcon from '@material-ui/icons/Menu'
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
 
-const styles = (theme) => ({
-  title: {
-    fontSize: 24,
-  },
+const styles = theme => ({
   placeholder: toolbarStyles(theme).root,
   toolbar: {
     justifyContent: 'space-between',
   },
-  // left: {
-  //   flex: 1,
-  // },
   leftLinkActive: {
     color: theme.palette.common.white,
   },
@@ -25,81 +22,86 @@ const styles = (theme) => ({
     display: 'flex',
     justifyContent: 'flex-end',
   },
-  rightLink: {
-    fontSize: 16,
-    color: theme.palette.common.white,
+  menuLink: {
+    fontSize: '1rem',
+    lineHeight: '2rem',
     marginLeft: theme.spacing(3),
   },
-  linkSecondary: {
-    color: theme.palette.secondary.main,
+  desktopLink: {
+    color: theme.palette.common.white,
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'inline',
+    },
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
   },
 });
 
-function AppAppBar(props) {
-  const {
-    classes,
-    title,
-    cart
-  } = props;
-
-  return (
-    <div>
-      <AppBar position="fixed">
-        <Toolbar className={classes.toolbar}>
-          {/* <div className={classes.left} /> */}
+const AppAppBar = ({
+  classes,
+  title,
+  cart,
+  openClicked,
+  links
+}) => (
+  <div>
+    <AppBar position="fixed">
+      <Toolbar className={classes.toolbar}>
+        <IconButton
+          color="inherit"
+          aria-label="open drawer"
+          onClick={() => openClicked()}
+          edge="start"
+          className={classes.menuButton}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Link
+          variant="h6"
+          underline="none"
+          color="inherit"
+          className={classes.title}
+          href="/"
+        >
+          {title}
+        </Link>
+        <div className={classes.right}>
+          {
+            links.map(({ name, link }) =>
+              <Link
+                key={name}
+                color="inherit"
+                variant="h6"
+                underline="none"
+                className={clsx(classes.menuLink, classes.desktopLink)}
+                href={link}
+              >
+                {name}
+              </Link>
+            )
+          }
           <Link
+            color="inherit"
             variant="h6"
             underline="none"
-            color="inherit"
-            className={classes.title}
-            href="/"
+            className={classes.menuLink}
+            href="/cart"
           >
-            {title}
+            <Badge badgeContent={cart.quantity} color="secondary">
+              <ShoppingCartIcon className={classes.cartIcon}/>
+            </Badge>
           </Link>
-          <div className={classes.right}>
-            <Link
-              color="inherit"
-              variant="h6"
-              underline="none"
-              className={classes.rightLink}
-              href="/register-kit"
-            >
-              {'Register Kit'}
-            </Link>
-            <Link
-              color="inherit"
-              variant="h6"
-              underline="none"
-              className={classes.rightLink}
-              href="/get-tested"
-            >
-              {'Get Tested'}
-            </Link>
-            <Link
-              color="inherit"
-              variant="h6"
-              underline="none"
-              className={classes.rightLink}
-              href="/account/order-history"
-            >
-              {'Order History'}
-            </Link>
-            <Link
-              variant="h6"
-              underline="none"
-              className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/cart"
-            >
-              {/* TODO: Use shopping cart icon w/ badge. */}
-              { cart.hasItems ? (`${cart.quantity} Item(s) in Cart`) : ('Cart Empty') }
-            </Link>
-          </div>
-        </Toolbar>
-      </AppBar>
-      <div className={classes.placeholder} />
-    </div>
-  );
-}
+        </div>
+      </Toolbar>
+    </AppBar>
+    <div className={classes.placeholder} />
+  </div>
+);
 
 AppAppBar.propTypes = {
   classes: PropTypes.object.isRequired,

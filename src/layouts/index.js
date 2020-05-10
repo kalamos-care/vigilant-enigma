@@ -22,13 +22,20 @@ const Layout = ({ children }) => {
               site {
                 siteMetadata {
                   title
+                  menuLinks {
+                    name
+                    link
+                  }
                 }
               }
             }
           `}
           render={data => (
             <>
-              <Navigation siteTitle={data.site.siteMetadata.title} />
+              <Navigation
+                siteTitle={data.site.siteMetadata.title}
+                menuLinks={data.site.siteMetadata.menuLinks}
+              />
               <Wrapper>
                 {children}
               </Wrapper>

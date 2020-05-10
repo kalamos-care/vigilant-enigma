@@ -1,8 +1,9 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import reduce from 'lodash/reduce'
 import PropTypes from 'prop-types'
 import StoreContext from '~/context/StoreContext'
-import AppAppBar from '../../theme/modules/views/AppAppBar';
+import AppAppBar from '~/theme/modules/views/AppAppBar';
+import AppDrawer from '~/theme/modules/views/AppDrawer'
 
 const useQuantity = () => {
 	const { store: {checkout} } = useContext(StoreContext)
@@ -11,17 +12,26 @@ const useQuantity = () => {
 	return [total !== 0, total]
 }
 
-const Navigation = ({ siteTitle }) => {
-  const [hasItems, quantity] = useQuantity()
-
+const Navigation = ({ siteTitle, menuLinks }) => {
+	const [hasItems, quantity] = useQuantity()
+	const [drawerOpen, setDrawerOpen] = useState(false)
 	return(
-		<AppAppBar
-			title={siteTitle}
-			cart={{
-				hasItems,
-				quantity
-			}}
-		/>
+		<>
+			<AppAppBar
+				title={siteTitle}
+				cart={{
+					hasItems,
+					quantity
+				}}
+				openClicked={() => setDrawerOpen(true)}
+				links={menuLinks}
+			/>
+			<AppDrawer
+				open={drawerOpen}
+				onDrawerClose={() => setDrawerOpen(false)}
+				links={menuLinks}
+			/>
+		</>
 	)
 }
 
