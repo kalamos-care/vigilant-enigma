@@ -30,6 +30,15 @@ const mutationQueries = {
         }
       }
     }`
+  }),
+  customerUpdate: customer => ({
+    query: `mutation {
+      customerUpdate(input: {
+
+      }) {
+
+      }
+    }`
   })
 };
 
