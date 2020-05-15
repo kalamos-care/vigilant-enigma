@@ -1,9 +1,9 @@
 const fetch = require('node-fetch').default;
 const { url, headers, mutationQuery } = require('./lib/shopify');
 
-exports.handler = async (event) => {
+exports.handler = async event => {
   try {
-    const body = JSON.parse(event.body);
+    const payload = JSON.parse(event.body);
     const mutation = event.headers['x-shopify-mutation'];
     if (typeof mutation !== 'string') {
       throw('');
@@ -11,7 +11,7 @@ exports.handler = async (event) => {
     const response = await fetch(url, {
       method: 'POST',
       headers,
-      body: JSON.stringify(mutationQuery(mutation)(body)),
+      body: JSON.stringify(mutationQuery(mutation)(payload)),
     })
     const json = await response.json()
     return {
