@@ -1,14 +1,6 @@
 import React, { useContext } from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
-
 import StoreContext from '~/context/StoreContext'
-// import {
-//   Grid,
-//   Product,
-//   Title,
-//   PriceTag
-// } from './styles'
-// import { Img } from '~/utils/styles'
 
 const ProductGrid = () => {
   const { store: {checkout} } = useContext(StoreContext)

@@ -25,12 +25,13 @@ module.exports = {
     ]
   },
   plugins: [
+    'gatsby-plugin-top-layout',
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {
-        stylesProvider: {
-          injectFirst: true,
-        },
+        // stylesProvider: {
+        //   injectFirst: true,
+        // },
       },
     },
     `gatsby-plugin-react-helmet`,
