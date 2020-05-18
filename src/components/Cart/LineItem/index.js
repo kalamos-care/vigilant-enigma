@@ -1,7 +1,5 @@
 import React, { useContext } from 'react'
-
 import StoreContext from '~/context/StoreContext'
-import { Wrapper } from './styles'
 
 const LineItem = props => {
   const { line_item } = props
@@ -29,7 +27,7 @@ const LineItem = props => {
   }
 
   return (
-    <Wrapper>
+    <div>
       {variantImage}
       <p>
         {line_item.title}
@@ -41,7 +39,7 @@ const LineItem = props => {
       {selectedOptions}
       {line_item.quantity}
       <button onClick={handleRemove}>Remove</button>
-    </Wrapper>
+    </div>
   )
 }
 

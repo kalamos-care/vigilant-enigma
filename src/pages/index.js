@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from "gatsby-image"
-import Hero from '../theme/modules/views/Hero';
-import VerticalCTA from '../theme/modules/views/VerticalCTA';
-import ProductCTA from '../theme/modules/views/ProductCTA';
+import Hero from '~/theme/modules/views/Hero';
+import VerticalCTA from '~/theme/modules/views/VerticalCTA';
+import ProductCTA from '~/theme/modules/views/ProductCTA';
 import SEO from '~/components/seo'
 import TestCenterSearch from '~/components/TestCenterSearch'
 // import ProductGrid from '~/components/ProductGrid'

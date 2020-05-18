@@ -25,6 +25,15 @@ module.exports = {
     ]
   },
   plugins: [
+    'gatsby-plugin-top-layout',
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        // stylesProvider: {
+        //   injectFirst: true,
+        // },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -76,18 +85,6 @@ module.exports = {
       options: {
         '~': path.join(__dirname, 'src/'),
       },
-    },
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      // If you want to use styled components, in conjunction to Material-UI, you should:
-      // - Change the injection order
-      // - Add the plugin
-      options: {
-        // stylesProvider: {
-        //   injectFirst: true,
-        // },
-      },
-      // 'gatsby-plugin-styled-components',
     },
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
